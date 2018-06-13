@@ -34,7 +34,7 @@ $content=$_REQUEST["inputContent"];
 $mail->Subject = 'do-not reply';
 $mail->ContentType = 'text/plain'; 
 $mail->isHTML(false);
-$mail->Body =  'Hello '.$name."!"."\n"."Thank you, for writing to us. This is a confirmation email that we have received your query and will get back to you soonest."."\n\n"."~~~~ Your Query ~~~~"."\n\n".$content."\n\n"."~~~~~~~~~~~~~~~~~~"."\n\n\n".'Team'."\n"."Kfbs.co.in"
+$mail->Body =  'Hello '.$name."!"."\n"."Thank you, for writing to us. This is a confirmation email that we have received your query and will get back to you soonest."."\n\n"."~~~~ Your Query ~~~~"."\n\n".$content."\n\n"."~~~~~~~~~~~~~~~~~~"."\n\n\n".'Sincerely'."\n"."Team Kfbs.co.in"
     				."\n\n\n\n\n"."****Please do not reply to this email as this email is sent from an unattended email address****";
 // you may also use $mail->Body = file_get_contents('your_mail_template.html');
 
@@ -98,7 +98,7 @@ else{
       <link rel="stylesheet" href="css/icons.css">
       <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
       <link rel="stylesheet" href="owl-carousel/owl.theme.css">
-      <meta name="theme-color" content="#15a1a5" />
+      <meta name="theme-color" content="#003366" />
       <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
       <!-- CUSTOM STYLE -->
       <!--  https://mfglabs.github.io/mfglabs-iconset/ -->
@@ -107,6 +107,17 @@ else{
       <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
       <script type="text/javascript" src="js/jquery-ui.min.js"></script>
       <script type="text/javascript" src="js/template-scripts.js"></script>
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120789154-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120789154-1');
+</script>
+
    </head>
    <body class="size-1140">
   	  <!-- PREMIUM FEATURES BUTTON -->
@@ -447,10 +458,10 @@ else{
                   <div class="s-12 m-12 l-5">
                     <h3>Fill This Up For A Free Quote</h3>
                     <form class="customform" method="POST" action="<?php $_PHP_SELF?>" role="form">
-                      <div class="s-12"><input  name="inputEmail" id="inputEmail" placeholder="Your e-mail" title="Your e-mail" type="text" /></div>
-                      <div class="s-12"><input name="inputName" id="inputName" placeholder="Your name" title="Your name" type="text" /></div>
-					  <div class="s-12"><textarea placeholder="Subject" name="inputSubject" id="inputSubject"  rows="5"></textarea></div>
-                      <div class="s-12"><textarea placeholder="Your message" name="inputContent" id="inputContent" rows="5"></textarea></div>
+                      <div class="s-12"><input  name="inputEmail" id="inputEmail" placeholder="Your e-mail" title="Your e-mail" type="email" required /></div>
+                      <div class="s-12"><input name="inputName" id="inputName" placeholder="Your name" title="Your name" type="text" required /></div>
+					  <div class="s-12"><textarea placeholder="Subject" name="inputSubject" id="inputSubject"  rows="5" required></textarea></div>
+                      <div class="s-12"><textarea placeholder="Your message" name="inputContent" id="inputContent" rows="5" required></textarea></div>
                       <div class="s-12 m-12 l-4"><button class="color-btn" type="submit" name="submitBtn" id="submitBtn">Submit</button></div>
                     </form>
                   </div>
