@@ -449,7 +449,7 @@ else{
                   <div class="s-12 m-12 l-4 margin-bottom right-align">
                      <h3>Krishna Financial & Bookeeping Services</h3>
                      <address>
-                        <p><strong>Adress:</strong> #105/2, Shanti Nagar, Karnal Near Gurdwara, Haryana-132002</p>
+                        <p><strong>Address:</strong> #105/2, Shanti Nagar, Karnal Near Gurdwara, Haryana-132002</p>
                         <p><strong>Mobile:</strong> +91 9034950501</p>
                         <p><strong>E-mail:</strong> contact@kfbs.co.in</p>
                      </address>
