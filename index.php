@@ -259,7 +259,7 @@ else{
                       </div>
                     </div>  
                   </div>
-                  <div class="tab-item">
+                  <!-- <div class="tab-item">
                     <a class="tab-label">Our Credentials</a>
                     <div class="tab-content">
                       <div class="margin">
@@ -269,7 +269,7 @@ else{
                         <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="img/por5.jpg" alt=""></a></div>
                       </div>
                     </div>  
-                  </div>
+                  </div> -->
                   
             </div>
          </div>       
