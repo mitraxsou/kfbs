@@ -29,13 +29,13 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
 if(isset($_REQUEST["submitBtn"])){
 $name=$_REQUEST["inputName"];
 $subject=$_REQUEST["inputSubject"];
-$email=$_REQUEST["inputEmail"];	
+$email=$_REQUEST["inputEmail"]; 
 $content=$_REQUEST["inputContent"];
 $mail->Subject = 'do-not reply';
 $mail->ContentType = 'text/plain'; 
 $mail->isHTML(false);
 $mail->Body =  'Hello '.$name."!"."\n"."Thank you, for writing to us. This is a confirmation email that we have received your query and will get back to you soonest."."\n\n"."~~~~ Your Query ~~~~"."\n\n".$content."\n\n"."~~~~~~~~~~~~~~~~~~"."\n\n\n".'Sincerely'."\n"."Team Kfbs.co.in"
-    				."\n\n\n\n\n"."****Please do not reply to this email as this email is sent from an unattended email address****";
+            ."\n\n\n\n\n"."****Please do not reply to this email as this email is sent from an unattended email address****";
 // you may also use $mail->Body = file_get_contents('your_mail_template.html');
 
 $mail->AddAddress ($email, $name);     
@@ -45,49 +45,49 @@ $mail->AddAddress ($email, $name);
 if(!$mail->Send()) 
 {
         $error_message = "Mailer Error: " . $mail->ErrorInfo;
-		echo $error_message;
+    echo $error_message;
         header('Location: error.php');
 } else 
 {
         $error_message = "Successfully sent!";
-		$mailInside = new PHPMailer(true);   
-		                         // Enable verbose debug output
-		$mailInside->isSMTP();                                      // Set mailer to use SMTP
-		$mailInside->Host = 'smtp.zoho.com';  // Specify main and backup SMTP servers
-		$mailInside->SMTPAuth = true;                               // Enable SMTP authentication
-		$mailInside->Username = 'donotreply@kfbs.co.in';                 // SMTP username
-		$mailInside->Password = 'L4>/35#PY8rKgPLf';                           // SMTP password
-		$mailInside->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-		$mailInside->Port = 587;                                    // TCP port to connect to
+    $mailInside = new PHPMailer(true);   
+                             // Enable verbose debug output
+    $mailInside->isSMTP();                                      // Set mailer to use SMTP
+    $mailInside->Host = 'smtp.zoho.com';  // Specify main and backup SMTP servers
+    $mailInside->SMTPAuth = true;                               // Enable SMTP authentication
+    $mailInside->Username = 'donotreply@kfbs.co.in';                 // SMTP username
+    $mailInside->Password = 'L4>/35#PY8rKgPLf';                           // SMTP password
+    $mailInside->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mailInside->Port = 587;                                    // TCP port to connect to
 
-		//Recipients
-		$mailInside->setFrom('donotreply@kfbs.co.in', 'kfbs.co.in');
+    //Recipients
+    $mailInside->setFrom('donotreply@kfbs.co.in', 'kfbs.co.in');
         $mailInside->Subject = 'New Query Received from the website: '.$subject;
-		$mailInside->ContentType = 'text/plain'; 
-		$mailInside->isHTML(false);
-		$mailInside->Body = 'You have a new Query!!'."\n\n"."Person Name : ".$name."\n\n"."Email id mentioned as: ".$email."\n\n"."Query is : ".$content;
+    $mailInside->ContentType = 'text/plain'; 
+    $mailInside->isHTML(false);
+    $mailInside->Body = 'You have a new Query!!'."\n\n"."Person Name : ".$name."\n\n"."Email id mentioned as: ".$email."\n\n"."Query is : ".$content;
 
-		$mailInside->AddAddress ('contact@kfbs.co.in');  
-		if(!$mailInside->Send()){
-				$error_message = "Mailer Error: " . $mailInside->ErrorInfo;
-				echo $error_message;
-				echo '<script language="javascript">';
+    $mailInside->AddAddress ('contact@kfbs.co.in');  
+    if(!$mailInside->Send()){
+        $error_message = "Mailer Error: " . $mailInside->ErrorInfo;
+        echo $error_message;
+        echo '<script language="javascript">';
         echo 'alert("Sorry !! Something went wrong please try letter")';
         echo '</script>';
 
-		}
-		else{
-			$error_message = "Successfully sent!";
-			echo '<script language="javascript">';
+    }
+    else{
+      $error_message = "Successfully sent!";
+      echo '<script language="javascript">';
       echo 'alert("message successfully sent")';
       echo '</script>';
-		}
-		
+    }
+    
 }
 
 }
 else{
-	?><!DOCTYPE html>
+  ?><!DOCTYPE html>
 <html lang="en-US">
    <head>
       <meta charset="UTF-8">
@@ -120,8 +120,8 @@ else{
 
    </head>
    <body class="size-1140">
-  	  <!-- PREMIUM FEATURES BUTTON -->
-  	  <!--<a target="_blank" class="hide-s" href="https://facebook.com/soumitra.mandal" style="position:fixed;top:130px;right:-14px;z-index:10;"><img src="img/premium-features.png" alt=""></a>  -->
+      <!-- PREMIUM FEATURES BUTTON -->
+      <!--<a target="_blank" class="hide-s" href="https://facebook.com/soumitra.mandal" style="position:fixed;top:130px;right:-14px;z-index:10;"><img src="img/premium-features.png" alt=""></a>  -->
       <!-- TOP NAV WITH LOGO -->
       <header>
          <div id="topbar">
@@ -218,7 +218,7 @@ else{
          <div id="first-block">
             <div class="line">
                <h1>Taking Personal Care of Your Business</h1>
-               <p>We follow the client instructions and client’s previous examples of similar work .In case of queries,
+               <p>We follow the client instructions and clientâ€™s previous examples of similar work .In case of queries,
                   we ask questions via email/Skype and then do the work as required. All of the work is reviewed by a CA.Cost benefit.
                   It is cheaper to hire an outsourced staff to do your bookkeeping / accounting than getting someone locally. Generally you will save as much as 50% of the cost to hire a bookkeeper locally than outsourcing it.
                    The output is of the same or even higher quality but cheaper which gives you more than what you are paying for.</p>
@@ -303,7 +303,7 @@ else{
                  <div class="s-12 m-6 l-6 margin-bottom">
                     <i class="icon-users icon3x"></i>
                     <h2>Awareness On Internal Controls</h2>
-                    <p>All our accountants and bookkeepers have high regards with integrity and confidentiality. Also, we have a non-disclosure agreement in place duly signed by all our staff. Our staff want your business to succeed as much as you do – it is a great opportunity for our staff to work with excellent US/Canada/New Zealand companies.</p>
+                    <p>All our accountants and bookkeepers have high regards with integrity and confidentiality. Also, we have a non-disclosure agreement in place duly signed by all our staff. Our staff want your business to succeed as much as you do â€“ it is a great opportunity for our staff to work with excellent US/Canada/New Zealand companies.</p>
                     
                    </div>
                  <div class="s-12 m-6 l-6 margin-bottom">
@@ -320,7 +320,7 @@ else{
                  <div class="s-12 m-6 l-6 margin-bottom">
                     <i class="icon-lock_alt icon3x"></i>
                       <h2>Use Strong And Multiple Passwords</h2>
-                      <p>Many of us make the mistake of using simple passwords that are easy for hackers to guess. At Virtuous Bookkeeping we make sure that we have complicated passwords, a simple “dictionary attack”—an attack by a hacker using an automated tool that uses a combination of dictionary words and numbers to crack passwords—will not occur.</p>
+                      <p>Many of us make the mistake of using simple passwords that are easy for hackers to guess. At Virtuous Bookkeeping we make sure that we have complicated passwords, a simple â€œdictionary attackâ€â€”an attack by a hacker using an automated tool that uses a combination of dictionary words and numbers to crack passwordsâ€”will not occur.</p>
                  </div>
                 
                </div>
@@ -432,7 +432,7 @@ else{
                      <h2>What about my paper receipts, how will I give it to the Advance Finserv staff?</h2>
                     <p >For your paper receipts you can scan it and send it to us or you may use a third party provider wherein you can mail all your paper receipts and they will scan it for you then our offshore staff will be able to view it online then record it to your accounting system.</p>
                      <h2>Are my records safe with Advance Finserv staff?</h2>
-                    <p >Yes it is. All our accountants and bookkeepers have high regards with integrity and confidentiality. Also, we have a non-disclosure agreement in place duly signed by all our  staff. Our staff want your business to succeed as much as you do – it is a great opportunity for our staff to work with excellent US/Canada/New Zealand companies. They treat it very seriously.</p>
+                    <p >Yes it is. All our accountants and bookkeepers have high regards with integrity and confidentiality. Also, we have a non-disclosure agreement in place duly signed by all our  staff. Our staff want your business to succeed as much as you do â€“ it is a great opportunity for our staff to work with excellent US/Canada/New Zealand companies. They treat it very seriously.</p>
                    </div>
                 </div>
           </div>
@@ -460,7 +460,7 @@ else{
                     <form class="customform" method="POST" action="<?php $_PHP_SELF?>" role="form">
                       <div class="s-12"><input  name="inputEmail" id="inputEmail" placeholder="Your e-mail" title="Your e-mail" type="email" required /></div>
                       <div class="s-12"><input name="inputName" id="inputName" placeholder="Your name" title="Your name" type="text" required /></div>
-					  <div class="s-12"><textarea placeholder="Subject" name="inputSubject" id="inputSubject"  rows="5" required></textarea></div>
+            <div class="s-12"><textarea placeholder="Subject" name="inputSubject" id="inputSubject"  rows="5" required></textarea></div>
                       <div class="s-12"><textarea placeholder="Your message" name="inputContent" id="inputContent" rows="5" required></textarea></div>
                       <div class="s-12 m-12 l-4"><button class="color-btn" type="submit" name="submitBtn" id="submitBtn">Submit</button></div>
                     </form>
@@ -477,7 +477,7 @@ else{
       <footer>
          <div class="line">
             <div class="s-12 l-6">
-               <p>Copyright 2018, kfbs.co.in </p>
+               <p>Copyright &copy;<?php echo" ".date("Y"); ?>, kfbs.co.in </p>
             </div>
             <div class="s-12 l-6">
                <a class="right" href="https//allmyitsolutions.com" title="click to visit allmyitsolutions.com">Maintained by<br>allmyitsolutions.com</a>
