@@ -431,7 +431,7 @@ a.tab-label:hover, a.tab-label.active-btn {
 	color: #fff;
 	display: block;
 	float: none;
-	height: 125px;
+	height: 25px;
 	padding: 0.625em 0;
 	text-align: center;
 	width: 100%;
@@ -448,7 +448,7 @@ a.tab-label:hover, a.tab-label.active-btn {
 	border-bottom: 1px solid #e0e0e0;
 	border-right: 1px solid #e0e0e0;
 	border-top: 1px solid #e0e0e0;
-	height: 125px;
+	height: inherit;
 	padding: 0.625em 1.25em;
 }
 .news-text p {

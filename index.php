@@ -21,11 +21,6 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
 
     //Recipients
     $mail->setFrom('donotreply@kfbs.co.in', 'kfbs.co.in');
-
-
-
-    
-
 if(isset($_REQUEST["submitBtn"])){
 $name=$_REQUEST["inputName"];
 $subject=$_REQUEST["inputSubject"];
@@ -120,9 +115,6 @@ else{
 
    </head>
    <body class="size-1140">
-      <!-- PREMIUM FEATURES BUTTON -->
-      <!--<a target="_blank" class="hide-s" href="https://facebook.com/soumitra.mandal" style="position:fixed;top:130px;right:-14px;z-index:10;"><img src="img/premium-features.png" alt=""></a>  -->
-      <!-- TOP NAV WITH LOGO -->
       <header>
          <div id="topbar">
             <div class="line">
@@ -162,7 +154,7 @@ else{
          <div id="carousel">
             <div id="owl-demo" class="owl-carousel owl-theme">
                <div class="item">
-                  <img src="img/first.jpg" alt="">
+                  <img src="img/first.jpg" alt="kfbs banner first">
                   <div class="line">
                      <div class="text hide-s">
                         <div class="line">
@@ -179,7 +171,7 @@ else{
                   </div>
                </div>
                <div class="item">
-                  <img src="img/second.jpg" alt="">
+                  <img src="img/second.jpg" alt="kfbs banner second">
                   <div class="line">
                      <div class="text hide-s">
                         <div class="line">
@@ -196,7 +188,7 @@ else{
                   </div>
                </div>
                <div class="item">
-                  <img src="img/third.jpg" alt="">
+                  <img src="img/third.jpg" alt="kfbs banner third">
                   <div class="line">
                      <div class="text hide-s">
                         <div class="line">
@@ -237,12 +229,12 @@ else{
                     <a class="tab-label active-btn">Softwares We Use</a>
                     <div class="tab-content">
                       <div class="margin">
-                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>xero</h4></div><img src="img/so1.png" alt=""></a></div>
-                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>quickbooks</h4></div><img src="img/so2.png" alt=""></a></div>
-                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>myob</h4></div><img src="img/so3.png" alt=""></a></div>
-                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>profile</h4></div><img src="img/so4.png" alt=""></a></div>
-                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Case Ware</h4></div><img src="img/so5.png" alt=""></a></div>
-                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>SAGE</h4></div><img src="img/so6.png" alt=""></a></div>
+                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><img src="img/xero.png" alt="xero"></a></div>
+                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><img src="img/quickbooks.png" alt="quickbooks"></a></div>
+                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><img src="img/myob.png" alt="myob"></a></div>
+                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><img src="img/profile.png" alt="profile"></a></div>
+                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><img src="img/caseware.png" alt="Case Ware"></a></div>
+                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><img src="img/sage.png" alt="SAGE"></a></div>
                       </div>
                     </div>  
                   </div>
@@ -250,11 +242,11 @@ else{
                     <a class="tab-label">Accounting For</a>        
                     <div class="tab-content">
                       <div class="margin">
-                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">Australia</h4></div><img src="img/aus.jpg" alt=""></a></div>
-                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">United State</h4></div><img src="img/us.jpg" alt=""></a></div>
-                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">United Kingdom</h4></div><img src="img/uk.jpg" alt=""></a></div>
-                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">Canada</h4></div><img src="img/ca.jpg" alt=""></a></div>
-                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">New Zealand</h4></div><img src="img/nz.jpg" alt=""></a></div>
+                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">Australia</h4></div><img src="img/aus.jpg" alt="Australia ca"></a></div>
+                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">United State</h4></div><img src="img/us.jpg" alt="United State"></a></div>
+                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">United Kingdom</h4></div><img src="img/uk.jpg" alt="United Kingdom<"></a></div>
+                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">Canada</h4></div><img src="img/ca.jpg" alt="Canada"></a></div>
+                        <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">New Zealand</h4></div><img src="img/nz.jpg" alt="New Zealand"></a></div>
                         
                       </div>
                     </div>  
@@ -278,7 +270,7 @@ else{
          <!-- ABOUT US -->
          <div id="about-us">
             <div class="s-12 m-12 l-6 media-container">
-               <img src="img/about.jpg" alt="">
+               <img src="img/about.jpg" alt="about">
             </div>
             <article class="s-12 m-12 l-6">
                <h2>Krishna Financial & Bookeeping Services</h2>
@@ -338,7 +330,6 @@ else{
                 <div class="s-12 m-6 l-6">
                   <div class="s-12 l-2">
                     <div class="news-date">
-                      <p class="day">$</p>
                     </div>
                   </div>
                   <div class="s-12 l-10">
@@ -351,7 +342,6 @@ else{
                 <div class="s-12 m-6 l-6">
                   <div class="s-12 l-2">
                     <div class="news-date">
-                       <p class="day">$</p>
                     </div>
                   </div>
                   <div class="s-12 l-10">
@@ -444,7 +434,7 @@ else{
                <h2 class="section-title">Contact Us</h2>
                <div class="margin">
                   <div class="s-12 m-12 l-3 hide-m hide-s margin-bottom right-align">
-                    <img src="img/contact.jpg" alt="">
+                    <img src="img/contact.jpg" alt="kfbs contact image">
                   </div>
                   <div class="s-12 m-12 l-4 margin-bottom right-align">
                      <h3>Krishna Financial & Bookeeping Services</h3>
@@ -480,7 +470,7 @@ else{
                <p>Copyright &copy;<?php echo" ".date("Y"); ?>, kfbs.co.in </p>
             </div>
             <div class="s-12 l-6">
-               <a class="right" href="https//allmyitsolutions.com" title="click to visit allmyitsolutions.com">Maintained by<br>allmyitsolutions.com</a>
+               <p class="right"  title="visit www.allmyitsolutions.com">Maintained by<br>www.allmyitsolutions.com</p>
             </div>
          </div>
       </footer>
