@@ -87,7 +87,7 @@ else{
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>kfbs.co.in</title>
+      <title>Krishna Financial & Bookeeping Services</title>
       <link rel="stylesheet" href="css/components.css">
       <link rel="stylesheet" href="css/responsee.css">
       <link rel="stylesheet" href="css/icons.css">
@@ -102,6 +102,9 @@ else{
       <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
       <script type="text/javascript" src="js/jquery-ui.min.js"></script>
       <script type="text/javascript" src="js/template-scripts.js"></script>
+      <!-- seo-->
+      <meta name="robots" content="noindex" />
+     
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120789154-1"></script>
