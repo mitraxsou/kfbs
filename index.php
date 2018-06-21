@@ -24,28 +24,28 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
 if(isset($_REQUEST["submitBtn"])){
 $name=$_REQUEST["inputName"];
 $subject=$_REQUEST["inputSubject"];
-$email=$_REQUEST["inputEmail"]; 
+$email=$_REQUEST["inputEmail"];
 $content=$_REQUEST["inputContent"];
 $mail->Subject = 'do-not reply';
-$mail->ContentType = 'text/plain'; 
+$mail->ContentType = 'text/plain';
 $mail->isHTML(false);
 $mail->Body =  'Hello '.$name."!"."\n"."Thank you, for writing to us. This is a confirmation email that we have received your query and will get back to you soonest."."\n\n"."~~~~ Your Query ~~~~"."\n\n".$content."\n\n"."~~~~~~~~~~~~~~~~~~"."\n\n\n".'Sincerely'."\n"."Team Kfbs.co.in"
             ."\n\n\n\n\n"."****Please do not reply to this email as this email is sent from an unattended email address****";
 // you may also use $mail->Body = file_get_contents('your_mail_template.html');
 
-$mail->AddAddress ($email, $name);     
+$mail->AddAddress ($email, $name);
 
 // you may also use this format $mail->AddAddress ($recipient);
 
-if(!$mail->Send()) 
+if(!$mail->Send())
 {
         $error_message = "Mailer Error: " . $mail->ErrorInfo;
     echo $error_message;
         header('Location: error.php');
-} else 
+} else
 {
         $error_message = "Successfully sent!";
-    $mailInside = new PHPMailer(true);   
+    $mailInside = new PHPMailer(true);
                              // Enable verbose debug output
     $mailInside->isSMTP();                                      // Set mailer to use SMTP
     $mailInside->Host = 'smtp.zoho.com';  // Specify main and backup SMTP servers
@@ -58,11 +58,11 @@ if(!$mail->Send())
     //Recipients
     $mailInside->setFrom('donotreply@kfbs.co.in', 'kfbs.co.in');
         $mailInside->Subject = 'New Query Received from the website: '.$subject;
-    $mailInside->ContentType = 'text/plain'; 
+    $mailInside->ContentType = 'text/plain';
     $mailInside->isHTML(false);
     $mailInside->Body = 'You have a new Query!!'."\n\n"."Person Name : ".$name."\n\n"."Email id mentioned as: ".$email."\n\n"."Query is : ".$content;
 
-    $mailInside->AddAddress ('contact@kfbs.co.in');  
+    $mailInside->AddAddress ('info@kfbs.co.in');
     if(!$mailInside->Send()){
         $error_message = "Mailer Error: " . $mailInside->ErrorInfo;
         echo $error_message;
@@ -77,7 +77,7 @@ if(!$mail->Send())
       echo 'alert("message successfully sent")';
       echo '</script>';
     }
-    
+
 }
 
 }
@@ -104,7 +104,7 @@ else{
       <script type="text/javascript" src="js/template-scripts.js"></script>
       <!-- seo-->
       <meta name="robots" content="noindex" />
-     
+
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120789154-1"></script>
@@ -122,7 +122,7 @@ else{
          <div id="topbar">
             <div class="line">
                <div class="s-12 m-6 l-6">
-                  <p>Krishna Financial & Bookeeping Services|Phone: <strong>(+91) 9034950501</strong> | Email Us: <strong>contact@kfbs.co.in</strong></p>
+                  <p>Krishna Financial & Bookeeping Services|Phone: <strong>(+91) 9034950501</strong> | Email Us: <strong>info@kfbs.co.in</strong></p>
                </div>
                <div class="s-12 m-6 l-6">
                   <div class="social right">
@@ -213,20 +213,20 @@ else{
          <div id="first-block">
             <div class="line">
                <h1>Taking Personal Care of Your Business</h1>
-               <p>We follow the client instructions and clientâ€™s previous examples of similar work .In case of queries,
+               <p>We follow the client instructions and client's previous examples of similar work .In case of queries,
                   we ask questions via email/Skype and then do the work as required. All of the work is reviewed by a CA.Cost benefit.
                   It is cheaper to hire an outsourced staff to do your bookkeeping / accounting than getting someone locally. Generally you will save as much as 50% of the cost to hire a bookkeeper locally than outsourcing it.
                    The output is of the same or even higher quality but cheaper which gives you more than what you are paying for.</p>
                   <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#contact">Contact Us</a></div>
             </div>
          </div>
-         
+
 
          <!-- Showcase -->
          <section id="features">
          <div id="our-work">
             <div class="line">
-               
+
                <div class="tabs">
                   <div class="tab-item tab-active">
                     <a class="tab-label active-btn">Softwares We Use</a>
@@ -239,10 +239,10 @@ else{
                         <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><img src="img/caseware.png" alt="Case Ware"></a></div>
                         <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><img src="img/sage.png" alt="SAGE"></a></div>
                       </div>
-                    </div>  
+                    </div>
                   </div>
                   <div class="tab-item">
-                    <a class="tab-label">Accounting For</a>        
+                    <a class="tab-label">Accounting For</a>
                     <div class="tab-content">
                       <div class="margin">
                         <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">Australia</h4></div><img src="img/aus.jpg" alt="Australia ca"></a></div>
@@ -250,9 +250,9 @@ else{
                         <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">United Kingdom</h4></div><img src="img/uk.jpg" alt="United Kingdom<"></a></div>
                         <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">Canada</h4></div><img src="img/ca.jpg" alt="Canada"></a></div>
                         <div class="s-12 m-6 l-4"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text">New Zealand</h4></div><img src="img/nz.jpg" alt="New Zealand"></a></div>
-                        
+
                       </div>
-                    </div>  
+                    </div>
                   </div>
                   <!-- <div class="tab-item">
                     <a class="tab-label">Our Credentials</a>
@@ -263,13 +263,13 @@ else{
                         <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="img/por3.jpg" alt=""></a></div>
                         <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="img/por5.jpg" alt=""></a></div>
                       </div>
-                    </div>  
+                    </div>
                   </div> -->
-                  
+
             </div>
-         </div>       
          </div>
-       </section>  
+         </div>
+       </section>
          <!-- ABOUT US -->
          <div id="about-us">
             <div class="s-12 m-12 l-6 media-container">
@@ -278,7 +278,7 @@ else{
             <article class="s-12 m-12 l-6">
                <h2>Krishna Financial & Bookeeping Services</h2>
                <p>We have been working in the domain of bookkeeping & tax outsourcing. Over the years,
-                 Advance Finserv has not only managed but excelled delivering prompt outsourcing services to business houses,
+                 Krishna Financial & Bookeeping Services has not only managed but excelled delivering prompt outsourcing services to business houses,
                  individuals and accounting firms in US, UK, Canada, Australia and New Zealand. We understand the intricacies involved in BPO.
                  So when you sign up with us to outsource your accounting work, no matter how small or large your work is, you are sure you have a
                  partner who is as good as you are.
@@ -288,7 +288,7 @@ else{
                </div>
             </article>
          </div>
-        
+
          <!--SECURITY-->
          <section id="security">
           <div id="features">
@@ -298,8 +298,8 @@ else{
                  <div class="s-12 m-6 l-6 margin-bottom">
                     <i class="icon-users icon3x"></i>
                     <h2>Awareness On Internal Controls</h2>
-                    <p>All our accountants and bookkeepers have high regards with integrity and confidentiality. Also, we have a non-disclosure agreement in place duly signed by all our staff. Our staff want your business to succeed as much as you do â€“ it is a great opportunity for our staff to work with excellent US/Canada/New Zealand companies.</p>
-                    
+                    <p>All our accountants and bookkeepers have high regards with integrity and confidentiality. Also, we have a non-disclosure agreement in place duly signed by all our staff. Our staff want your business to succeed as much as you do , it is a great opportunity for our staff to work with excellent US/Canada/New Zealand/UK/Australia companies.</p>
+
                    </div>
                  <div class="s-12 m-6 l-6 margin-bottom">
                     <i class="icon-printer icon3x"></i>
@@ -309,15 +309,15 @@ else{
                  <div class="s-12 m-6 l-6 margin-bottom">
                     <i class="icon-warning icon3x"></i>
                       <h2>Security Policies</h2>
-                      <p>At Advance Finserv we have clear policies and procedures in place. This will ensure our staff and data are continuously operating in a secure environment. We ensure that all computers on the corporate network have state of the art security software.</p>
-                
+                      <p>At Krishna Financial & Bookeeping Services we have clear policies and procedures in place. This will ensure our staff and data are continuously operating in a secure environment. We ensure that all computers on the corporate network have state of the art security software.</p>
+
                  </div>
                  <div class="s-12 m-6 l-6 margin-bottom">
                     <i class="icon-lock_alt icon3x"></i>
                       <h2>Use Strong And Multiple Passwords</h2>
-                      <p>Many of us make the mistake of using simple passwords that are easy for hackers to guess. At Virtuous Bookkeeping we make sure that we have complicated passwords, a simple â€œdictionary attackâ€â€”an attack by a hacker using an automated tool that uses a combination of dictionary words and numbers to crack passwordsâ€”will not occur.</p>
+                      <p>Many of us make the mistake of using simple passwords that are easy for hackers to guess. At Virtuous Bookkeeping we make sure that we have complicated passwords, a simple â€œdictionaryattackan attack by a hacker using an automated tool that uses a combination of dictionary words and numbers to crack passwordsâ€”will not occur.</p>
                  </div>
-                
+
                </div>
             </div>
          </div>
@@ -359,7 +359,7 @@ else{
             </div>
          </div>
        </section>
- 
+
          <!-- SERVICES -->
          <div id="services">
             <div class="line">
@@ -369,7 +369,7 @@ else{
                       <i class="icon-xing_circle"></i>
                      <div class="service-text">
                        <h3>Accounting Services - Australia</h3>
-                       <p>We have deep expertise in providing accounting outsourcing services for the Australian firms. We provide accounting, bookkeeping, payroll, financial analysis and tax preparation services.
+                       <p>We have deep expertise in providing accounting outsourcing services for the Australian firms. We provide accounting, bookkeeping, payroll, BAS return, financial analysis and tax preparation services.
                           Most of our clients in Australia include accounting firms.</p>
                       </div>
                   </div>
@@ -387,7 +387,7 @@ else{
                      <div class="service-text">
                         <h3>Accounting Services - CA</h3>
                         <p>We have deep expertise in providing accounting outsourcing services for the Canadian firms. We provide accounting, bookkeeping, payroll,
-                           financial analysis and tax preparation services. Most of our clients in Canada include accounting firms.</p>
+                           financial analysis and tax preparation services. .</p>
                      </div>
                   </div>
                   <div class="s-12 m-12 l-6 margin-bottom">
@@ -395,14 +395,14 @@ else{
                      <div class="service-text">
                         <h3>Accounting Services -  New Zealand</h3>
                         <p>We have deep expertise in providing accounting outsourcing services for the New Zealand firms. We provide Financial Reporting,
-                           bookkeeping, payroll, GST and tax preparation services. Most of our clients in New Zealand include accounting firms.</p>
+                           bookkeeping, payroll, Xero Conversion, GST and tax preparation services. Most of our clients in New Zealand include accounting firms.</p>
                      </div>
                   </div>
                   <div class="s-12 m-12 l-6 margin-bottom">
                     <i class="icon-xing_circle"></i>
                      <div class="service-text">
                         <h3>Accounting Services -  UK</h3>
-                        <p>We have deep expertise in providing accounting outsourcing services for the UK firms. We provide accounting, bookkeeping, payroll,
+                        <p>We have deep expertise in providing accounting outsourcing services for the UK firms. We provide accounting, bookkeeping, VAT returns, payroll,
                            financial analysis and tax preparation services. Most of our clients in UK and small medium businesses
                           across diverse sectors like retail and wholesale, real estate, health care, construction, manufacturing and IT firms.</p>
                      </div>
@@ -410,22 +410,22 @@ else{
                </div>
             </div>
          </div>
-         
+
          <section id="faq">
           <div id="features">
             <div class="line">
              <h4 class="section-title">F.A.Q</h4>
                <div class="margin" style="text-align: justify; padding-right: 30px; padding-bottom: 50px; padding-left: 80px;">
-                    <h2> What about my paper receipts, how will I give it to the Advance Finserv staff?</h2>
+                    <h2> What about my paper receipts, how will I give it to the Krishna Financial & Bookeeping Services staff?</h2>
                     <p >For your paper receipts you can scan it and send it to us or you may use a third party provider wherein you can mail all your paper receipts and they will scan it for you then our offshore staff will be able to view it online then record it to your accounting system.</p>
-                     <h2>What are the qualifications of Advance Finserv bookkeepers / accountants?</h2>
+                     <h2>What are the qualifications of Krishna Financial & Bookeeping Services bookkeepers / accountants?</h2>
                     <p >Our staff are all from India, all of which are University graduates with a degree in Bachelor in Accountancy which is a two year course. Some are Chartered Accountants in India with years of experience in the corporate world.</p>
                      <h2>Why should I choose to outsource my bookkeeping than hiring a local firm to do the job?</h2>
                     <p >Cost benefit. It is cheaper to hire an outsourced staff to do your bookkeeping / accounting than getting someone locally. Generally you will save as much as 50% of the cost to hire a bookkeeper locally than outsourcing it. The output is of the same or even higher quality but cheaper which gives you more than what you are paying for.</p>
-                     <h2>What about my paper receipts, how will I give it to the Advance Finserv staff?</h2>
+                     <h2>What about my paper receipts, how will I give it to the Krishna Financial & Bookeeping Services staff?</h2>
                     <p >For your paper receipts you can scan it and send it to us or you may use a third party provider wherein you can mail all your paper receipts and they will scan it for you then our offshore staff will be able to view it online then record it to your accounting system.</p>
-                     <h2>Are my records safe with Advance Finserv staff?</h2>
-                    <p >Yes it is. All our accountants and bookkeepers have high regards with integrity and confidentiality. Also, we have a non-disclosure agreement in place duly signed by all our  staff. Our staff want your business to succeed as much as you do â€“ it is a great opportunity for our staff to work with excellent US/Canada/New Zealand companies. They treat it very seriously.</p>
+                     <h2>Are my records safe with Krishna Financial & Bookeeping Services staff?</h2>
+                    <p >Yes it is. All our accountants and bookkeepers have high regards with integrity and confidentiality. Also, we have a non-disclosure agreement in place duly signed by all our  staff. Our staff want your business to succeed as much as you do , it is a great opportunity for our staff to work with excellent US/Canada/New Zealand/UK/Australia companies. They treat it very seriously.</p>
                    </div>
                 </div>
           </div>
@@ -444,7 +444,7 @@ else{
                      <address>
                         <p><strong>Address:</strong> #105/2, Shanti Nagar, Karnal Near Gurdwara, Haryana-132002</p>
                         <p><strong>Mobile:</strong> +91 9034950501</p>
-                        <p><strong>E-mail:</strong> contact@kfbs.co.in</p>
+                        <p><strong>E-mail:</strong> info@kfbs.co.in</p>
                      </address>
 
                   </div>
