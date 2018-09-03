@@ -671,6 +671,11 @@ else{
 		})();
 		</script>
 	<!--End of Tawk.to Script-->
+	
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b8cf9dd9e58830b"></script>
+	<!-- End of addthis -->
+
    </body>
 </html>
 <?php
