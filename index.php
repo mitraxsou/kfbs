@@ -15,7 +15,7 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
     $mail->Host = 'smtp.zoho.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'donotreply@kfbs.co.in';                 // SMTP username
-    $mail->Password = 'L4>/35#PY8rKgPLf';                           // SMTP password
+    $mail->Password = 'L4>/3yourpassword#PY8rKgPLf';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
