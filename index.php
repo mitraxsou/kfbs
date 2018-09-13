@@ -51,7 +51,7 @@ if(!$mail->Send())
     $mailInside->Host = 'smtp.zoho.com';  // Specify main and backup SMTP servers
     $mailInside->SMTPAuth = true;                               // Enable SMTP authentication
     $mailInside->Username = 'donotreply@kfbs.co.in';                 // SMTP username
-    $mailInside->Password = 'L4>/35#PY8rKgPLf';                           // SMTP password
+    $mailInside->Password = 'YOURPASSWORD';                           // SMTP password
     $mailInside->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mailInside->Port = 587;                                    // TCP port to connect to
 
@@ -741,19 +741,13 @@ $message =  new PHPMailer(true);
     //Server settings
     //                              // Enable verbose debug output
     // $message->isSMTP();                                      // Set mailer to use SMTP
-    // $message->Host = 'smtp.zoho.com';  // Specify main and backup SMTP servers
-    // $message->SMTPAuth = true;                               // Enable SMTP authentication
-    // $message->Username = 'balajipastapure@gmail.com';                 // SMTP username
-    // $message->Password = '9767281145';                           // SMTP password
-    // $message->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    // $message->Port = 587;  
-    //                                   // TCP port to connect to
+                                      // TCP port to connect to
 
      $message->isSMTP();                                      // Set mailer to use SMTP
     $message->Host = 'smtp.zoho.com';  // Specify main and backup SMTP servers
     $message->SMTPAuth = true;                               // Enable SMTP authentication
     $message->Username = 'donotreply@kfbs.co.in';                 // SMTP username
-    $message->Password = 'L4>/35#PY8rKgPLf';                           // SMTP password
+    $message->Password = 'YOURPASSWORD';                           // SMTP password
     $message->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $message->Port = 587;    
 
