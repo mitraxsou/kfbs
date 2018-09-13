@@ -51,7 +51,7 @@ if(!$mail->Send())
     $mailInside->Host = 'smtp.zoho.com';  // Specify main and backup SMTP servers
     $mailInside->SMTPAuth = true;                               // Enable SMTP authentication
     $mailInside->Username = 'donotreply@kfbs.co.in';                 // SMTP username
-    $mailInside->Password = 'L4>/35#PY8rKgPLf';                           // SMTP password
+    $mailInside->Password = 'YOURPASSWORD';                           // SMTP password
     $mailInside->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mailInside->Port = 587;                                    // TCP port to connect to
 
